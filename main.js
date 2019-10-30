@@ -23,10 +23,9 @@
       li = document.createElement('div');
       li.className = 'col-2';
       li.dataset.index = i;
-      li.addEventListener('click', function(){
-        mainImage.src = this.children[0].src;
-        current =this.dataset.index;
-        this.classList.add('current_image');
+      li.addEventListener('click', (e) =>{
+        mainImage.src = e.target.src;
+        current = e.target.index;
         displayPageNumber();
       });
       img = document.createElement('img');
